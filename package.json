@@ -1,0 +1,24 @@
+{
+  "name": "portfolio-axel",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel src/index.html",
+    "build": "parcel build src/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yo-gif12/portfolio-axel.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yo-gif12/portfolio-axel/issues"
+  },
+  "homepage": "https://github.com/yo-gif12/portfolio-axel#readme",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4",
+    "sass": "^1.26.0"
+  }
+}
