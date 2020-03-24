@@ -1,0 +1,41 @@
+@font-face {
+	font-weight: normal;
+	font-style: normal;
+	font-family: 'Blokk';
+	src: url('../fonts/blokk/BLOKKRegular.eot');
+	src: url('../fonts/blokk/BLOKKRegular.eot?#iefix') format('embedded-opentype'),
+		 url('../fonts/blokk/BLOKKRegular.woff') format('woff'),
+		 url('../fonts/blokk/BLOKKRegular.svg#BLOKKRegular') format('svg');
+}
+
+@font-face {
+	font-weight: normal;
+	font-style: normal;
+	font-family: 'feather';
+	src:url('../fonts/feather/feather.eot?-9jv4cc');
+	src:url('../fonts/feather/feather.eot?#iefix-9jv4cc') format('embedded-opentype'),
+		url('../fonts/feather/feather.woff?-9jv4cc') format('woff'),
+		url('../fonts/feather/feather.ttf?-9jv4cc') format('truetype'),
+		url('../fonts/feather/feather.svg?-9jv4cc#feather') format('svg');
+}
+
+/* variabes */
+$bg-color: #13131E;
+$primary-color: #8095FF;
+$secondary-color: #E72B2B;
+$white: #fff;
+$black: #000000;
+$black-second: #31313A; 
+$gray: #ddd;
+
+/* mixins */
+@mixin animate-cubic($type, $duration, $propriety) {
+	-webkit-animation: $type $duration cubic-bezier(0.7,0,0.3,1)  $propriety;
+	animation: $type $duration cubic-bezier(0.7,0,0.3,1)  $propriety;
+  }
+
+@import 'normalize.scss';
+@import 'generique.scss';
+@import 'animation.scss';
+@import 'effect-loading.scss';
+@import 'works.scss';

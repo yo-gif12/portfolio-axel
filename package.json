@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "parcel src/index.html",
-    "build": "parcel build src/index.html"
+    "dev": "parcel src/index.html src/pages/*.html",
+    "build": "parcel build src/index.html src/pages/*.html"
   },
   "repository": {
     "type": "git",
@@ -20,5 +20,8 @@
   "devDependencies": {
     "parcel-bundler": "^1.12.4",
     "sass": "^1.26.0"
+  },
+  "dependencies": {
+    "normalize.css": "^8.0.1"
   }
 }

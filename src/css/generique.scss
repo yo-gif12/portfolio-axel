@@ -1,0 +1,265 @@
+
+
+*, *:after, *:before { -webkit-box-sizing: border-box; box-sizing: border-box; }
+.clearfix:before, .clearfix:after { content: ''; display: table; }
+.clearfix:after { clear: both; }
+
+::-webkit-scrollbar {
+	width: 0px;
+	height: 0px;
+}
+  
+::-webkit-scrollbar-button{
+	width: 0px;
+	height: 0px;
+}
+  
+  
+
+body {
+	background: $bg-color url('./../img/bg-mobile.png') center center no-repeat;
+	background-size:  85% 100%;
+	color: $white;
+	font-weight: 400;
+	font-size: 1em;
+	font-family: 'Raleway', Arial, sans-serif;
+	@media (min-width: 768px) { 
+		background: $bg-color url('./../img/bg-tablette.png') center center no-repeat;
+		background-size:  85% 100%;
+	}
+
+	&.works__page {
+		.ip__main {
+			@media (min-width: 768px) {
+				margin-top: 15px;
+				height: 88vh;
+				width: 100%;
+				position: relative;
+			}
+		}
+
+		.browser__title {
+			@media (min-width: 768px) {
+				margin: 0;
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				z-index: -1;
+
+				.title__block {					
+					font-weight: bold;
+					font-size: 170px;
+					line-height: 240px;
+					color: $black-second;
+					-webkit-text-stroke: initial;
+					text-stroke: initial;
+					-webkit-text-fill-color: initial;
+					text-fill-color: initial;
+					position: fixed;
+					left: 0;
+					right: 0;
+					top: 20%;
+					bottom: 0;
+				}
+			}
+		}
+
+		.browser__elements {
+			background: $white url('./../img/bg-mobile.png') center center no-repeat;
+			background-size:  85% 100%;
+			color: $bg-color;
+			@media (min-width: 768px) {
+				background: transparent;
+				
+				article {
+					width: 344px;
+					height: 223px;
+					padding: 0;
+					
+					img {
+						width: 100%;
+						height: 100%;
+					}
+				}
+
+				svg {
+					position: absolute;
+					top: 0;
+					margin: auto;
+				}
+
+				.contain {
+					width: 85%;
+					height: 73%;
+					overflow:hidden;
+					white-space:nowrap;
+					position:fixed;
+					top:140px;
+					left:0;
+					right:0;
+					bottom:0;
+					display:flex;
+					flex-wrap:no-wrap;
+					margin: auto;
+					@media (min-width: 1025px) {
+						top: 30px;
+					}
+
+					div {
+						width:344px;
+						height: 100%;
+						position:relative;
+						margin-left: 10px;
+						.last__worsk {
+							width: 200px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+
+a {
+	color: $primary-color;
+	text-decoration: none;
+	outline: none;
+	transition: color 0.4s;
+
+	&:hover, &:focus {
+		color: $white;
+	}
+}
+
+img {
+	max-width: 100%;
+}
+
+section {
+	text-align: center;
+}
+
+/* To Navigation Style */
+.menu__top {
+	font-weight: 700;
+	font-size: 1.2em;
+	line-height: 2.2;
+	padding: 10px 7.5% 5px 7.5%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	z-index: 10;
+	background: $bg-color ;
+	
+	nav {
+		width: 50%;
+		display: flex;
+		justify-content: space-between;
+		@media (min-width: 768px) {
+			width: 176px;
+			float: left;
+		}
+
+		a {
+			font-weight: bold;	
+			line-height: 19px;
+		}
+	}
+}
+
+
+.ip__footer {
+	text-align: center;
+	color: $primary-color;
+	padding-bottom: 1em;
+	@media (min-width: 768px) {
+		display: none;
+	}
+	a {
+		font-weight: 800;
+		line-height: 19px;
+		text-decoration: underline;
+	}
+
+	p {
+		font-size: 0.7em;
+	}
+}
+
+.right-social {
+	display: none;
+	@media (min-width: 768px) {
+		display: block;
+		width: 184px;
+		float: right;
+	}
+}
+
+.ip__container {
+	width: 85%;
+	max-width: 1900px;
+	margin: auto;
+	position: relative;
+}
+
+.title__block {
+	font-size: 54px;
+	text-transform: uppercase;
+}
+
+.block__mobile {
+	display: block;
+	@media (min-width: 768px) {
+		display: none;
+	}
+}
+.block__desktop {
+	display: none;
+	@media (min-width: 1025px) {
+		display: block;
+	}
+
+}
+.block__tablet {
+	display: none;
+	@media (min-width: 768px) {
+		display: block;
+	}
+	@media (min-width: 1025px) {
+		display: none;
+	}
+}
+
+
+.progress {
+	position: fixed;
+	top: 0;
+	right: 0;
+	width: 6px;
+	height: 100%;
+	background: transparent;
+	z-index: 25;
+	@media (min-width: 1025px) {
+		right: initial;
+		top: initial;
+		bottom: 0;
+		left: 0;
+		height: 6px;
+		width: 100%;
+	}
+	.bar {
+	  height: 10%;
+	  width: 100%;
+	  background: $secondary-color;
+	  transition: background .15s ease;
+	  @media (min-width: 1025px) {
+			height: 100%;
+			width: 10%;
+		}
+	}
+  }
