@@ -1,0 +1,371 @@
+@import url("https://fonts.googleapis.com/css?family=Merriweather&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Exo+2&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+@media (min-width: 320px) {
+  body {
+    background: #13131e;
+    color: white;
+.email{display: none;}
+    .line__purple {
+      margin-top: 5em;
+      margin-left: 1em;
+    }
+    .flexx {
+      display: flex;
+      height: 100px;
+      .flex {
+        height: 50px;
+        margin-top: 3.5em;
+        .strong {
+          height: 50px;
+        }
+      }
+    }
+    .stron2{
+     display: none;
+    }
+    .title {
+      font-family: "Exo 2";
+      font-weight: bold;
+      font-size: 34px;
+      line-height: 132.27%;
+      margin-left: 16px;
+      margin-right: 16px;
+    }
+    .title1 {
+      font-family: "Exo 2";
+      font-weight: bold;
+      font-size: 40px;
+      line-height: 132.27%;
+      margin-left: 8px;
+    }
+    .title__regard {
+      font-family: Merriweather;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 15px;
+      line-height: 144.3%;
+      margin: 1em;
+    }
+    .subtitle {
+      font-family: "Exo 2";
+      font-style: normal;
+      font-weight: bolder;
+      font-size: 28px;
+      line-height: 38px;
+      margin: 0.5em;
+      margin-bottom: none;
+      .subtitle__color {
+        color: #8095ff;
+      }
+    }
+    .desing {
+      width: 100vw;
+      margin-top: 2em;
+      margin-bottom: 2em;
+    }
+    .descritption__of--me {
+      font-family: Merriweather;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 144.26%;
+      margin: 1em;
+    }
+    .date {
+      color: #8095ff;
+      font-family: Merriweather;
+      font-size: 16px;
+      line-height: 167.7%;
+      margin-left: 1em;
+      margin-top: 1em;
+    }
+
+    .digital {
+      font-family: Merriweather;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 144.22%;
+      margin-left: 1em;
+      margin-bottom: 1em;
+    }
+    .colorleft{
+      display: none;}
+    .contact {
+      margin-top: 5em;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 185px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1em;
+    }
+  }
+}
+@media (min-width: 768px) {
+  body {
+    background: #13131e;
+    color: white;
+    margin: 2em;
+    .title {
+      font-family: "Exo 2";
+      font-style: normal;
+      font-weight: bold;
+      font-size: 60px;
+      margin-top: 0.6em;
+      line-height: 132.27%;
+    }
+    .strong {
+      margin-top: 1em;
+    }
+    .flex {
+      margin-bottom: 111px;
+      width: 300px;
+      height: 500px;
+    }
+    .title1 {
+      margin-bottom: 30px;
+      font-family: "Exo 2";
+      font-style: normal;
+      font-weight: bold;
+      font-size: 60px;
+      line-height: 132.27%;
+    }
+    .bg {
+    background-image: url(../img/DESIGn1.png);
+      background-position: center;
+      background-size: 690px;
+    }
+    .title__regard {
+      font-family: Merriweather;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 15px;
+      line-height: 144.3%;
+      margin: 1em;
+    }
+    .subtitle {
+      font-family: "Exo 2";
+      font-style: normal;
+      font-weight: bolder;
+      font-size: 28px;
+      line-height: 38px;
+
+      .subtitle__color {
+        color: #8095ff;
+      }
+    }
+    .desing {
+      visibility: hidden;
+    }
+    .descritption__of--me {
+      font-family: Merriweather;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 144.26%;
+      text-align: left;
+      margin-bottom: 4em;
+    }
+    .me {
+      width: 450px;
+      margin-left: 35%;
+    }
+    .abm {
+      position: absolute;
+     transform: rotate(270deg);
+  width: 500px;
+  height: 500px;
+  display: flex;
+  
+  justify-content: space-between;
+ 
+    }
+    .date {
+      color: #8095ff;
+      font-family: Merriweather;
+      font-size: 16px;
+      line-height: 167.7%;
+      margin-left: 37%;
+      margin-top: 1em;
+    }
+.colorleft{
+  display: none;}
+    .digital {
+      font-family: Merriweather;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 144.22%;
+      margin-left: 37%;
+      margin-bottom: 1em;
+
+    }
+
+    .contact {
+      margin-top: 7em;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 185px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1em;
+    }
+  }
+}
+// DEESKTOP SCREEN
+@media (min-width: 1366px){
+  body{
+    margin: 4em;
+    .title {
+      font-family: "Exo 2";
+font-style: normal;
+font-weight: bold;
+font-size: 90px;
+line-height: 132.27%;
+      margin-top: 0.6em;
+      width: 750px;
+    }
+    .strong {
+      display: none;
+    }
+    .stron2{
+      display: block;
+
+    }
+    .flex {
+      margin-bottom: 111px;
+      width: 300px;
+      height: 500px;
+    }
+    .title1 {
+      width: 800px;
+      margin-bottom: 30px;
+      font-family: Exo 2;
+font-style: normal;
+font-weight: bold;
+font-size: 90px;
+line-height: 132.27%;
+    }
+    .bg {
+       background-image: url(../asset/img/DSIGN.png);
+      background-position: center;
+      background-size: 690px;
+    }
+    .title__regard {
+      font-family: Merriweather;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 15px;
+      line-height: 144.3%;
+      margin: 1em;
+      width: 800px;
+    }
+ 
+    .email{
+      display: block;
+     
+    }
+    .allth{
+      width: 850px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .subtitle {
+      font-family: "Exo 2";
+      font-style: normal;
+      font-weight: bolder;
+      font-size: 28px;
+      line-height: 38px;
+
+      .subtitle__color {
+        color: #8095ff;
+      }
+    }
+    .desing {
+      display: none;
+    }
+    .colorleft{
+      display: block;
+   position: absolute;
+   left: -70px;
+   top: 600px;
+   width: 200px;
+   height: 60px;
+      background-color: #8095ff;
+      transform: rotate(-90deg);
+      
+      padding-top: 20px;
+      align-items: center;
+      .discover{
+        font-family: Merriweather;
+text-align: center;
+font-size: 16px;
+text-transform: uppercase;
+      }
+    }
+    .content{
+      margin-top: 15em;
+    }
+    .descritption__of--me {
+      font-family: Merriweather;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 144.26%;
+      text-align: left;
+      margin-bottom: 4em;
+    }
+    .meee{
+      width: 400px;
+      margin-left: 20em;
+    }
+    .me {
+      width: 450px;
+      margin-left: 35%;
+    }
+    .abm {
+      position: absolute;
+     transform: rotate(270deg);
+  width: 500px;
+  height: 500px;
+  display: flex;
+  justify-content: space-between;
+    }
+    .date {
+      color: #8095ff;
+      font-family: Merriweather;
+      font-size: 16px;
+      line-height: 167.7%;
+      margin-left: 37%;
+      margin-top: 1em;
+    }
+
+    .digital {
+      font-family: Merriweather;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 144.22%;
+      margin-left: 37%;
+      margin-bottom: 1em;
+
+    }
+
+    .contact {
+      display: none;
+    }
+  }
+}
