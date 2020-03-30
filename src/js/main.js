@@ -78,6 +78,20 @@
 	
 })();
 
+
+$(document).ready(function(){
+	$('.close-icon').on('click', function() {
+	  $(this).addClass('clicked');
+	  // do whatever you want to do
+	});
+  });
+  
+  $(document).on('click', function(e){
+	if (!$(e.target).hasClass('close-icon-container') && $(e.target).closest('.close-icon-container').length==0) {
+	  $('.close-icon').removeClass('clicked');
+	}
+});
+
 function progress() {
 	var windowScrollTop = $(window).scrollTop();
 	var docHeight = $(document).height();

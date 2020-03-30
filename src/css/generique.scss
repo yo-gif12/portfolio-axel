@@ -28,6 +28,10 @@ body {
 		background: $bg-color url('./../img/bg-tablette.png') center center no-repeat;
 		background-size:  85% 100%;
 	}
+	@media (min-width: 1025px) { 
+		background: $bg-color url('./../img/bg-desktop.png') center center no-repeat;
+		background-size:  85% 100%;
+	}
 
 	&.works__page {
 		section {
@@ -363,3 +367,57 @@ img {
 		}
 	}
   }
+
+  .close-icon-container {
+	  position: fixed;
+	  top: 10px;
+	  right: 25px;
+	.close-icon {
+	  display: inline-block;
+	  height: 40px;
+	  width: 40px;
+	  cursor: pointer;
+	  stroke: $white;
+	
+		.circle {
+		  opacity: 0.1;
+		}
+	
+		.progress {
+		  opacity: 0;
+		  stroke-dasharray: 0,120;
+		  transition: 0.5s cubic-bezier(0.165, 0.775, 0.145, 1.020);
+		}
+	  
+	}
+	
+	&:hover {
+	  .close-icon {
+		.progress {
+		  opacity: 1;
+		  stroke-dasharray: 25,120;
+		}
+	  }
+	}
+	
+	.close-icon { 
+	  &:hover {
+		.progress {
+		  opacity: 1;
+		  stroke-dasharray: 90,120;
+		}
+	  }
+	  &:active,
+	  &.clicked {
+		.progress {
+		  stroke-dasharray:120,120;
+		}
+	  }
+	  &.clicked {
+		.progress {
+		  opacity: 1;
+		}
+	  }
+	}
+  }
+  
