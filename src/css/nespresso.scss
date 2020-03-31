@@ -7,13 +7,13 @@
     background: #13131e;
 
     .doublelogo {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -140%);
+      // position: absolute;
+      // top: 50%;
+      // left: 50%;
+      // transform: translate(-50%, -140%);
       .neslogo {
-        width: 256px;
-        height: 51px;
+        // width: 256px;
+        // height: 51px;
       }
       .what {
         display: block;
@@ -116,13 +116,13 @@
   body {
     background: #13131e;
     .doublelogo {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -140%);
+      // position: absolute;
+      // top: 50%;
+      // left: 50%;
+      // transform: translate(-50%, -140%);
       .neslogo {
-        width: 710px;
-        height: 128px;
+        // width: 710px;
+        // height: 128px;
       }
       .what {
         display: block;
@@ -220,14 +220,10 @@
 @media (min-width: 1366px) {
   body {
     background: #13131e;
-    .doublelogo {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -140%);
-      .neslogo {
-        width: 710px;
-        height: 128px;
+    
+      
+      .doublelogo {
+      top: -5em;
       }
       .what {
         display: block;
@@ -236,7 +232,7 @@
         width: 256px;
         height: 56px;
       }
-    }
+    
     .desc {
       display: none;
     }

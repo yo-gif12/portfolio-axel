@@ -92,6 +92,19 @@ $(document).ready(function(){
 	}
 });
 
+$(document).ready(function(){
+	$('.img__works a').on('click', function() {
+		var rel = $(this).attr('rel')
+	  $('.close__button').addClass('close__button--hide');
+	  $('.' + rel).removeClass('close__button--hide');
+	  // do whatever you want to do
+	});
+	$('.close-icon-container').on('click',function () {
+		$(this).parent('div').addClass('close__button--hide')
+	});
+  });
+  
+
 function progress() {
 	var windowScrollTop = $(window).scrollTop();
 	var docHeight = $(document).height();

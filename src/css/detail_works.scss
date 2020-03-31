@@ -1,75 +1,69 @@
 @import url("https://fonts.googleapis.com/css?family=Merriweather&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Exo+2&display=swap");
 
-
 .close__button {
   position: relative;
+  &--hide {
+    display: none;
+  }
 }
 
-.panel{
-  background: $bg-color url('./../img/bg-mobile.png') center center no-repeat;
-  background-size:  85% 100%;
+.panel {
+  background: $bg-color url("./../img/bg-mobile.png") center center no-repeat;
+  background-size: 85% 100%;
   color: $white;
   width: 100%;
   min-height: 100%;
   position: fixed;
   top: 0;
   bottom: 0;
-  box-shadow: 4px -4px 4px rgba(0,0,0,0.2);
+  box-shadow: 4px -4px 4px rgba(0, 0, 0, 0.2);
   margin-left: -102%;
-  z-index:255;
-  -webkit-transition: all .6s ease-in-out;
-  -moz-transition: all .6s ease-in-out;
-  -o-transition: all .6s ease-in-out;
-  -ms-transition: all .6s ease-in-out;
-  transition: all .6s ease-in-out;
+  z-index: 255;
+  -webkit-transition: all 0.6s ease-in-out;
+  -moz-transition: all 0.6s ease-in-out;
+  -o-transition: all 0.6s ease-in-out;
+  -ms-transition: all 0.6s ease-in-out;
+  transition: all 0.6s ease-in-out;
   overflow: auto;
-  @media (min-width: 768px) { 
-  background: $bg-color url('./../img/bg-tablette.png') center center no-repeat;
-  background-size:  85% 100%;
+  @media (min-width: 768px) {
+    background: $bg-color url("./../img/bg-tablette.png") center center
+      no-repeat;
+    background-size: 85% 100%;
   }
-  @media (min-width: 1025px) { 
-    background: $bg-color url('./../img/bg-desktop.png') center center no-repeat;
-    background-size:  85% 100%;
-  }
-  
-  &:target{
-      margin-left: 0%;
+  @media (min-width: 1025px) {
+    background: $bg-color url("./../img/bg-desktop.png") center center no-repeat;
+    background-size: 85% 100%;
   }
 
+  &:target {
+    margin-left: 0%;
+  }
   .ip__container {
-    margin-top: 4em;  
+    margin-top: 4em;
   }
-
 }
 
 //Mobile SCREEN
 .doublelogo {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -140%);
+  padding: 15em 0 15em 0;
+  display: block;
+  margin: auto;
   .neslogo {
+    display: block;
+    margin: auto;
     width: 256px;
     height: 51px;
+    margin-bottom: 1em;
   }
   .what {
+    width: 137px;
+    height: 57px;
     display: block;
-    margin-right: auto;
-    margin-left: auto;
+    margin: auto;
   }
 }
 .desc {
-  margin-top: 675px;
-  .hetic {
-    color: #13131e;
-  }
-  .desc__text {
-    display: none;
-  }
-  .about {
-    display: none;
-  }
   .desc__type {
     font-family: "Merriweather", serif;
     color: white;
@@ -100,6 +94,25 @@
     margin-top: 1em;
     padding-left: 16px;
   }
+  .hetic {
+    display: none;
+  }
+  .desc__text {
+    display: none;
+  }
+  .about {
+    display: none;
+  }
+}
+.contact {
+  display: block;
+  margin: auto;
+  margin-top: 1em;
+  width: 185px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1em;
 }
 .favorite {
   font-family: Merriweather;
@@ -119,6 +132,7 @@
   box-shadow: 12px 12px 2px 1px rgba(241, 241, 241, 0);
   background: #8095ff;
 }
+
 .nes__illustration {
   width: 100vw;
 }
@@ -131,172 +145,192 @@
 .palette {
   display: none;
 }
+.type--palette {
+  display: none;
+}
 .desk {
   display: none;
 }
 .second {
   display: none;
 }
-.contact {
-  margin-top: 2em;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 185px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 1em;
-}
 
 @media (min-width: 768px) {
-    .doublelogo {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -140%);
-      .neslogo {
-        width: 710px;
-        height: 128px;
-      }
-      .what {
-        display: block;
-        margin-right: auto;
-        margin-left: auto;
-      }
+  .doublelogo {
+    .neslogo {
+      width: 710px;
+      height: 128px;
     }
-    .desc {
-      margin-top: 675px;
-      .hetic {
-        font-family: "Exo 2", sans-serif;
-        font-weight: bold;
-        font-size: 54px;
-        line-height: 132.27%;
-        color: white;
-        margin-left: 0.6em;
-      }
-      .desc__typeface {
-        display: block;
-      }
-      .about {
-        display: block;
-        width: 225px;
-      }
-      .desc__text {
-        display: block;
-        color: white;
-        font-family: Merriweather;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 17px;
-        line-height: 159.65%;
-        margin-left: 2em;
-        width: 704px;
-      }
-      .desc__type {
-        display: none;
-      }
-
-      .firstdiv {
-        display: flex;
-        justify-content: space-between;
-        margin-top: 3em;
-        margin-left: 1.5em;
-        margin-right: 2em;
-      }
-      .seconddiv {
-        display: flex;
-        justify-content: space-between;
-        margin-top: 1em;
-        margin-left: 1.5em;
-        height: 170px;
-        margin-bottom: 1em;
-        margin-right: 2em;
-      }
-
-      .date {
-        margin-right: 4em;
-      }
-      .desc__type--date--text {
-        margin-top: 1em;
-      }
-    }
-    .line {
-      display: block;
-      margin: auto;
-      margin-top: 2em;
-    }
-    .palette {
-      margin-top: 2em;
-      margin-bottom: 2em;
-      width: 392px;
-      height: 100px;
-      display: block;
-      margin-right: auto;
-      margin-left: auto;
-    }
-    .type--palette {
-      color: #8095ff;
-      font-family: "Exo 2", sans-serif;
-      font-weight: bold;
-      font-size: 17px;
-      line-height: 20px;
-      text-transform: uppercase;
-      margin-top: 1em;
-      text-align: center;
-    }
-    .contact {
-      display: none;
-    }
-}
-
-// DEESKTOP SCREEN
-@media (min-width: 1366px) {
-    .doublelogo {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -140%);
-      .neslogo {
-        width: 710px;
-        height: 128px;
-      }
-      .what {
-        display: block;
-        margin-right: auto;
-        margin-left: auto;
-        width: 256px;
-        height: 56px;
-      }
-    }
-    .desc {
-      display: none;
-    }
-
+  }
+  .desc {
     .hetic {
+      display: block;
       font-family: "Exo 2", sans-serif;
       font-weight: bold;
       font-size: 54px;
       line-height: 132.27%;
       color: white;
-      margin-left: 1.5em;
-      margin-top: 15em;
+      margin-left: 0.6em;
     }
-    .first {
-      margin-right: 5em;
+    .desc__typeface {
+      display: block;
     }
-    .desk {
-      display: flex;
-      justify-content: space-between;
+    .about {
+      display: block;
+      width: 225px;
+      padding-left: 1em;
+    }
+    .desc__text {
+      display: block;
       color: white;
       font-family: Merriweather;
+      font-size: 17px;
+      line-height: 159.65%;
+      margin-left: 2em;
+      width: 704px;
     }
-    .desk__text {
-      align-self: center;
-      width: 900px;
-      margin-left: 5em;
-      line-height: 172.4%;
+    .desc__type {
+      display: none;
     }
+
+    .firstdiv {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 3em;
+      margin-left: 1.5em;
+      margin-right: 2em;
+    }
+    .seconddiv {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 1em;
+      margin-left: 1.5em;
+      height: 170px;
+      margin-bottom: 1em;
+      margin-right: 2em;
+    }
+
+    .date {
+      margin-right: 3em;
+    }
+    .desc__type--date--text {
+      margin-top: 1em;
+    }
+  }
+  .line {
+    display: block;
+    margin: auto;
+    margin-top: 2em;
+  }
+  .palette {
+    margin-top: 2em;
+    margin-bottom: 2em;
+    width: 392px;
+    height: 100px;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .type--palette {
+    display: block;
+    color: #8095ff;
+    font-family: "Exo 2", sans-serif;
+    font-weight: bold;
+    font-size: 17px;
+    line-height: 20px;
+    text-transform: uppercase;
+    margin-top: 1em;
+    text-align: center;
+  }
+  .contact {
+    display: none;
+  }
+}
+
+// DEESKTOP SCREEN
+@media (min-width: 1366px) {
+  .doublelogo {
+    .neslogo {
+      width: 710px;
+      height: 128px;
+    }
+    .what {
+      width: 256px;
+      height: 56px;
+    }
+  }
+  .desc {
+    display: none;
+  }
+
+  .first {
+    margin-right: 4em;
+    width: 205px;
+  }
+  .desk {
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    font-family: Merriweather;
+  }
+  .heticc {
+    display: block;
+    font-family: "Exo 2", sans-serif;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 132.27%;
+    color: white;
+    height: 55px;
+  }
+  .desk__text {
+    align-self: center;
+    width: 800px;
+    line-height: 172.4%;
+    margin: 1em;
+  }
+  .desk__type--date--text {
+    font-family: Merriweather;
+    color: #c4c4c4;
+    font-size: 17px;
+    line-height: 167.7%;
+    margin-top: 1em;
+  }
+  .desk__type--date {
+    color: #8095ff;
+    font-family: "Exo 2", sans-serif;
+    font-weight: bold;
+    font-size: 17px;
+    line-height: 20px;
+    text-transform: uppercase;
+    margin-top: 1em;
+  }
+  .favorite {
+    font-family: Merriweather;
+
+    font-weight: bold;
+    font-size: 17px;
+    line-height: 21px;
+    text-transform: uppercase;
+    color: #ffffff;
+    display: block;
+    margin: auto;
+    margin-top: 3em;
+    width: 320px;
+    height: 88px;
+    border: 2px solid #ffffff;
+    box-shadow: 12px 12px 2px 1px rgba(241, 241, 241, 0);
+    background: #8095ff;
+    margin-bottom: 1em;
+  }
+
+  .linee {
+    display: block;
+    margin: auto;
+    margin-top: 2em;
+    margin-bottom: 2em;
+  }
+  
+  .abou {
     .desk__type--date--text {
       font-family: Merriweather;
       color: #c4c4c4;
@@ -306,80 +340,35 @@
       line-height: 167.7%;
       margin-top: 1em;
     }
-    .desk__type--date {
-      color: #8095ff;
-      font-family: "Exo 2", sans-serif;
-      font-weight: bold;
-      font-size: 17px;
-      line-height: 20px;
-      text-transform: uppercase;
-      margin-top: 1em;
-    }
-    .favorite {
-      font-family: Merriweather;
-      font-style: normal;
-      font-weight: bold;
-      font-size: 17px;
-      line-height: 21px;
-      text-transform: uppercase;
-      color: #ffffff;
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-      margin-top: 3em;
-      width: 320px;
-      height: 88px;
-      border: 2px solid #ffffff;
-      box-shadow: 12px 12px 2px 1px rgba(241, 241, 241, 0);
-      background: #8095ff;
-      margin-bottom: 1em;
-    }
-
-    .linee {
-      display: block;
-      margin: auto;
-      margin-top: 2em;
-      margin-bottom: 2em;
-    }
-    .abou {
-      .desk__type--date--text {
-        font-family: Merriweather;
-        color: #c4c4c4;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 17px;
-        line-height: 167.7%;
-        margin-top: 1em;
-      }
-    }
-    .second {
-      display: flex;
-      justify-content: space-between;
-      margin-left: 5em;
-      margin-right: 7em;
-      margin-bottom: 2em;
-    }
-    .type--palet {
-      color: #8095ff;
-      font-family: "Exo 2", sans-serif;
-      font-weight: bold;
-      font-size: 17px;
-      line-height: 20px;
-      text-transform: uppercase;
-      margin-top: 1em;
-      text-align: center;
-    }
-    .abou {
-      width: 200px;
-    }
-    .palet {
-      margin-top: 2em;
-      margin-bottom: 2em;
-      width: 392px;
-      height: 100px;
-    }
-
-    .contact {
-      display: none;
-    }
+  }
+  .second {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2em;
+    margin-right: 4em;
+   
+   
+  }
+  .type--palet {
+    color: #8095ff;
+    font-family: "Exo 2", sans-serif;
+    font-weight: bold;
+    font-size: 17px;
+    line-height: 20px;
+    text-transform: uppercase;
+    margin-top: 1em;
+    text-align: center;
+  }
+  .desk__typeface{
+    width: 200px;
+  }
+  .abou {
+    width: 200px;
+  }
+  .palet {
+    margin-top: 2em;
+    margin-bottom: 2em;
+    
+    height: 100px;
+  }
 }
