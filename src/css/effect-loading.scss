@@ -7,29 +7,31 @@
 	width: 100%;
 	height: 100%;
 	background: #13131E;
-
 	h1 {
 		margin: 0;
 	}
 
-	.ip__logo,.ip__loader,.ip__title {
+	.loader__element {
+		position: absolute;
+		top: 0;
+		min-height: 480px;
+		width: 100%;
+		height: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.ip__loader,.ip__title {
 		position: absolute;
 		left: 0;
 		width: 100%;
-		opacity: 0;
 		cursor: default;
 		pointer-events: none;
 	}
 
-	.ip__logo {
-		top: 0;
-		height: 100%;
-		-webkit-transform: translate3d(0,25%,0);
-		transform: translate3d(0,25%,0);
-		display: none;
-		@media (min-width: 1025px) {
-			display: block;
-		}
+	.ip__loader,.loader__element {
+		opacity: 0;
 	}
 
 	.ip__title {
@@ -42,11 +44,15 @@
 	
 	.ip__loader {
 		bottom: 20%;
+		visibility: hidden;
 	}
 
 	.ip__inner {
-		display: block;
-		margin: 0 auto;
+		margin-bottom: 20vh;
+		display: none;
+		@media (min-width: 1025px) {
+			display: block;
+		}
 	}
 
 	svg {
@@ -85,10 +91,10 @@
 /* Initial animation of header elements */
 
 .loading {
-	.ip__logo,.ip__loader,.ip__title {
+	.ip__loader,.loader__element {
 		opacity: 1;
-		-webkit-animation: animInitialHeader 1s cubic-bezier(0.7,0,0.3,1) both;
-		animation: animInitialHeader 1s cubic-bezier(0.7,0,0.3,1) both;
+		-webkit-animation: animInitialHeader 1s forwards;
+		animation: animInitialHeader 1s forwards;
 	}
 
 	.ip__loader {
@@ -100,26 +106,20 @@
 /* Header */
 .loaded {
 	/* Header elements when loading finishes */
-	.ip__logo, .ip__loader,.ip__title {
+	.ip__loader,.loader__element {
 		opacity: 1;
 	}
 
-	.ip__logo {
-		-webkit-transform-origin: 60% 0;
-		transform-origin: 60% 0;
-		-webkit-animation: animLoadedLogo 1s cubic-bezier(0.7,0,0.3,1) forwards;
-		animation: animLoadedLogo 1s cubic-bezier(0.7,0,0.3,1) forwards;
-	}
 
-	.ip__loader,.ip__title {
-		-webkit-animation: animLoadedLoader 0.5s cubic-bezier(0.7,0,0.3,1) forwards;
-		animation: animLoadedLoader 0.5s cubic-bezier(0.7,0,0.3,1) forwards;
+	.ip__loader {
+		-webkit-animation: animLoadedLoader 0.5s backwards;
+		animation: animLoadedLoader 0.5s backwards;
 	}
 
 	/* Header animation when loading finishes */
 	.ip__header {
-		-webkit-animation: animLoadedHeader 1s cubic-bezier(0.7,0,0.3,1) forwards;
-		animation: animLoadedHeader 1s cubic-bezier(0.7,0,0.3,1) forwards;
+		-webkit-animation: animLoadedHeader 1.3s forwards;
+		animation: animLoadedHeader 1.3s forwards;
 	}
 
 	/* Content animations */
