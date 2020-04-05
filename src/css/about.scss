@@ -4,6 +4,7 @@ $black-second: #31313A;
 .me {
   position: relative;
   overflow: hidden;
+
   @media (min-width: 768px) { 
     height: 510px;
     margin-top: 125px;
@@ -23,6 +24,7 @@ $black-second: #31313A;
 
 .presentation {
   margin-top: 12em;
+ 
   @media (min-width: 768px) { 
     margin-top: 80px;
   }
@@ -40,7 +42,7 @@ $black-second: #31313A;
     font-size: 32px;
     font-weight: 600;
     line-height: 132.27%;
-    
+
     @media (min-width: 768px) { 
       font-size: 70px;
     }
@@ -128,31 +130,30 @@ $black-second: #31313A;
   font-family: 'Merriweather';
 	letter-spacing: 1.5px;
   position: relative;
-  @media (min-width: 768px) { 
-    padding-left: 10.6em;
+  height: auto;
+  @media (min-width: 768px) {
+    min-height: 22em;
+    height: auto;
   }
-  @media (min-width: 1025px) { 
-    padding-left: 30em;
+  @media (min-width: 900px) {
+    min-height: 20em;
   }
+  @media (min-width: 1025px) {
+    min-height: 15em;
+  }
+  
   p{
 		margin-top: 1.5em;
   }
   h2 {
     @media (min-width: 768px) { 
-      position: absolute;
+      display: inline-block;
+      position: relative;
+      -webkit-transform-origin: top left;
+      -ms-transform-origin: top left;
+      transform-origin: top left;
       transform: rotate(-90deg);
-      left: -12.4em;
-      top: 12.5em;
-      width: 100%;
-      text-align: right;
-    }
-    @media (min-width: 900px) { 
-      left: -16.8em;
-      top: 17.3em;
-    }
-    @media (min-width: 1025px) { 
-      left: -41vw;
-      top: 570px;
+      top: 140px;
     }
   }
 }
@@ -163,5 +164,19 @@ $black-second: #31313A;
   &--date {
     display: block;
     color: $primary-color;
+  }
+  @media (min-width: 768px) { 
+    h2 {
+      top: 275px;
+    }
+  }
+}
+
+@media (min-width: 768px) { 
+  .features--content,.about__me--content {
+    width: 60%;
+    position: absolute;
+    right: 0;
+    top: 0;
   }
 }
