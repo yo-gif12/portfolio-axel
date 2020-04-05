@@ -93,7 +93,7 @@ $(document).ready(function(){
 });
 
 $(document).ready(function(){
-	$('.img__works a').on('click', function() {
+	$('.link__next').on('click', function() {
 		var rel = $(this).attr('rel')
 	  $('.close__button').addClass('close__button--hide');
 	  $('.' + rel).removeClass('close__button--hide');
