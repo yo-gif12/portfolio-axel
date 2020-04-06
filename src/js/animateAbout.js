@@ -1,63 +1,139 @@
-/*window.addEventListener('scroll', function() {
-   var defilement = window.pageYOffset + 'px';
-   var design = document.querySelector('.design__text')
-   console.log(design);
-   if(defilement==design){
-    document.querySelector('body').style.background="red";
+
+var stop = false,
+   scrollableElement = document.body,
+   designText = document.querySelector('.design__text h1'),
+   winHeight = $(window).height(),
+   topLimit = winHeight * .2,
+   bottomLimit = winHeight * .8,
+   // left: 37, up: 38, right: 39, down: 40,
+   // spacebar: 32, pageup: 33, pagedown: 34, end: 35, home: 36
+   keys = {37: 1, 38: 1, 39: 1, 40: 1},
+   supportsPassive = false;
+
+if(screen.width  < 768){
+   var initialPosition = 0,
+   limit = -110,
+   jump = (limit*-1)/10,
+   position = 0;
+}
+else if(screen.width  >= 768 && screen.width  < 900){
+   var initialPosition = 150,
+   limit = 0,
+   jump = initialPosition/10,
+   position = 150;
+}
+else if(screen.width  >= 900 && screen.width  < 1025){
+   var initialPosition = 200,
+   limit = 0,
+   jump = initialPosition/10,
+   position = 200;
+}
+else if(screen.width  >= 1025 && screen.width  < 1400){
+   var initialPosition = 250,
+   limit = 0,
+   jump = initialPosition/10,
+   position = 250;
+}
+else {
+   var initialPosition = 300,
+   limit = 0,
+   jump = initialPosition/10,
+   position = 300;
+}
+
+function preventDefault(e) {
+  e.preventDefault();
+}
+
+function preventDefaultForScrollKeys(e) {
+  if (keys[e.keyCode]) {
+    preventDefault(e);
+    return false;
+  }
+}
+
+// modern Chrome requires { passive: false } when adding event
+try {
+  window.addEventListener("test", null, Object.defineProperty({}, 'passive', {
+    get: function () { supportsPassive = true; } 
+  }));
+} catch(e) {}
+
+var wheelOpt = supportsPassive ? { passive: false } : false;
+var wheelEvent = 'onwheel' in document.createElement('div') ? 'wheel' : 'mousewheel';
+
+// call this to Disable
+function disableScroll() {
+  window.addEventListener('DOMMouseScroll', preventDefault, false); // older FF
+  window.addEventListener(wheelEvent, preventDefault, wheelOpt); // modern desktop
+  window.addEventListener('touchmove', preventDefault, wheelOpt); // mobile
+  window.addEventListener('keydown', preventDefaultForScrollKeys, false);
+}
+
+// call this to Enable
+function enableScroll() {
+  window.removeEventListener('DOMMouseScroll', preventDefault, false);
+  window.removeEventListener(wheelEvent, preventDefault, wheelOpt); 
+  window.removeEventListener('touchmove', preventDefault, wheelOpt);
+  window.removeEventListener('keydown', preventDefaultForScrollKeys, false);
+}
+
+function checkScrollDirection(event) {
+   if (checkScrollDirectionIsUp(event)) {
+     up();
+   } else {
+     down();
    }
-  });*/
+ }
+ 
+ function checkScrollDirectionIsUp(event) {
+   if (event.wheelDelta) {
+     return event.wheelDelta > 0;
+   }
+   return event.deltaY < 0;
+ }
 
-  $(document).ready(function() {
-   var winHeight = $(window).height(),
-       topLimit = winHeight * .2,
-       bottomLimit = winHeight * .8;
+function up(){
+   if(position==initialPosition){
+      stop = false;
+      enableScroll();
+   }
+   else if(position<initialPosition){
+      position+=jump;
+      designText.style.transform="translateX("+position+"px)";
+   }
+ }
 
-   $(window).on('scroll', function() {
-       
-      var thisTop = $('.design__text').offset().top - $(window).scrollTop();
-      if (thisTop >= topLimit && (thisTop + $('.design__text').height()) <= bottomLimit) {
-         console.log("J'y suis");
-      } else{
-         console.log("fini");
-      }
-   });
+function down(){
+   if(position==limit){
+      stop = false;
+      enableScroll();
+   }
+   else if(position>limit){
+      position-=jump;
+      designText.style.transform="translateX("+position+"px)";
+   }
+ }
+
+function mooveDesign(){
+   if(stop){
+      //à completer les direction 
+      scrollableElement.addEventListener('wheel', checkScrollDirection);
+      scrollableElement.addEventListener('DOMMouseScroll', checkScrollDirection);
+      scrollableElement.addEventListener('keydown', checkScrollDirection);
+      scrollableElement.addEventListener('touchmove', checkScrollDirection);
+   }
+}
+
+$(window).on('scroll', function() {
+   var thisTop = $('.design__text h1').offset().top - $(window).scrollTop();
+   if (thisTop >= topLimit && (thisTop + $('.design__text h1').height()) <= bottomLimit) {
+      disableScroll();
+      stop = true;
+   }
 });
 
-
-//or if you want  vanilla JS (supplied by felgall)
-// http://community.sitepoint.com/t/changing-an-element-background-color-on-page-scroll-viewport/193578/17?u=paulob
-/*
-addClass = function(el,cl) {
-var re = new RegExp('(^|\\s)'+cl+'(\\s|$)');
-if (!el.className.match(re)) el.className += " "+cl;
-};
-
-removeClass = function(el,cl) {
-var re = new RegExp('(^|\\s)'+cl+'(\\s|$)');
-if (el.className.match(re))
-el.className=el.className.replace(re,' ');
-};
-
-var scrollHi = function() {
-[].forEach.call(document.querySelectorAll('.scroll li'), function(el) {
-           var thisTop = (el.style.top || el.style.pixelTop || el.offsetTop || 0) - (window.pageXOffset ? window.pageYOffset : document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop);
-           if (thisTop >= topLimit && (thisTop + (el.offsetHeight || el.clipHeight || 0)) <= bottomLimit) {
-               addClass(el,'highlight');
-           } else{
-      removeClass(el,'highlight');
-          } 
-        });
-}; 
-
-var winHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight,
-       topLimit = winHeight * 0.2,
-       bottomLimit = winHeight * 0.8;
-
-   window.addEventListener('scroll', scrollHi, false );
-
-
-
-
-*/
-
-
+window.addEventListener('DOMMouseScroll', mooveDesign);
+window.addEventListener(wheelEvent, mooveDesign); 
+window.addEventListener('touchmove', mooveDesign);
+window.addEventListener('keydown', mooveDesign);
