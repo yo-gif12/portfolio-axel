@@ -32,10 +32,10 @@
         <div id="ip__container">
             <!-- initial header -->
             <div class="ip__header">
-                <h1 class="ip__logo">
-                    <img class="ip__inner"  src="./img/logo.png" alt="">
-                </h1>
-                <div class="ip__title"> I’m Axel UI / UX Designer based in Paris</div>
+              <div class="loader__element">
+                <img class="ip__inner"  src="./img/logo.png" alt="">
+                <div class="ip__title">  I’m Axel UI / UX Designer based in Paris</div>
+              </div>
                 <div class="ip__loader">
                     <svg class="ip__inner" width="60px" height="60px" viewBox="0 0 80 80">
                         <path class="ip__loader--circlebg" d="M40,10C57.351,10,71,23.649,71,40.5S57.351,71,40.5,71 S10,57.351,10,40.5S23.649,10,40.5,10z"/>
@@ -71,7 +71,7 @@
                                 <div id="group-1">
                                     <article></article>
                                     <article class="img__works">
-                                        <a href="#nespresso" rel="close__nespresso">
+                                        <a class="link__next" href="#nespresso" rel="close__nespresso">
                                             <img src="./img/nespresso.png" alt="">                        
                                             <svg width="235" height="46" viewBox="0 0 235 46" fill="none" 
                                                 xmlns="http://www.w3.org/2000/svg">
@@ -91,7 +91,7 @@
                                 </div>
                                 <div id="group-2">
                                     <article class="img__works">
-                                        <a href="#fortnite"  rel="close__fortnite">
+                                        <a class="link__next" href="#fortnite"  rel="close__fortnite">
                                             <svg width="235" height="46" viewBox="0 0 144 40" fill="none" 
                                                 xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M0 20C0 31.0023 0.0273245 40 0.0637571 40C0.118406 40 7.54156 38.6304 8.45237 38.449L8.926 38.3583V31.0113V23.6735H11.7495H14.5731V22.3311C14.5731 21.5964 14.6004 19.6825 14.6368 18.068L14.6915 15.1474H11.8133H8.926V11.9274V8.70748H12.2505C14.0812 8.70748 15.575 8.68934 15.575 8.66213C15.575 8.56236 16.3036 0.816325 16.3491 0.426302L16.4038 -1.96695e-06H8.19734H0L0 20Z"/>
@@ -108,7 +108,7 @@
                                     </article>
                                     <article></article>
                                     <article class="img__works">
-                                        <a href="#akin" rel="close__akin">
+                                        <a class="link__next" href="#akin" rel="close__akin">
                                             <img src="./img/akin.png" alt="">
                                             <svg width="98" height="40" viewBox="0 0 98 40" fill="none" 
                                             xmlns="http://www.w3.org/2000/svg">
@@ -131,7 +131,7 @@
                                 <div  id="group-3">
                                     <article></article>
                                     <article  class="img__works">
-                                        <a href="#moode" rel="close__moode">
+                                        <a class="link__next" href="#moode" rel="close__moode">
                                             <img src="./img/moode.png" alt="">
                                             <svg width="168" height="40" viewBox="0 0 168 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M46.6019 0.776733V1.94178C45.4369 1.94178 44.6602 1.94178 43.8835 2.33013C43.4951 2.71848 43.1068 3.10683 42.7184 3.49518C42.3301 3.88353 42.7184 5.04858 42.7184 6.60198V33.3981C42.7184 34.5631 42.7184 35.7282 43.1068 36.5049C43.4951 37.2816 43.8835 37.6699 44.2718 37.6699C44.6602 38.0583 45.8252 38.0583 46.9903 38.0583V39.2233C45.8252 39.2233 44.6602 39.2233 43.1068 39.2233C41.5534 39.2233 40 39.2233 38.4466 39.2233C36.8932 39.2233 34.9515 39.2233 33.3981 39.2233C31.8447 39.2233 30.6796 39.2233 29.5146 39.2233V38.0583C30.6796 38.0583 31.8447 37.6699 32.233 37.6699C33.0097 37.2816 33.3981 36.8932 33.3981 36.5049C33.7864 35.7282 34.1748 34.9515 34.1748 33.3981V4.27188H34.5631L20.9709 39.6117H20.1942L5.43689 4.66023V30.6796C5.43689 32.6214 5.43689 34.1748 5.82524 35.3398C6.21359 36.5049 6.60194 37.2816 7.37864 37.6699C8.15534 38.0583 9.32039 38.4466 10.8738 38.4466V39.6117C10.0971 39.6117 9.32039 39.6117 8.15534 39.6117C6.99029 39.6117 5.82524 39.6117 5.04854 39.6117C4.27184 39.6117 3.49515 39.6117 2.3301 39.6117C1.5534 39.6117 0.776699 39.6117 0 39.6117L0 38.0583C1.16505 38.0583 1.94175 37.6699 2.71845 37.2816C3.1068 36.8932 3.49515 36.1165 3.8835 34.9515C4.27184 33.7864 3.8835 32.6214 3.8835 31.068V6.60198C3.8835 5.04858 3.8835 4.27188 3.8835 3.49518C3.8835 2.71848 3.1068 2.33013 2.71845 2.33013C1.94175 1.94178 1.16505 1.94178 0 1.94178L0 0.776733C0.38835 0.776733 1.16505 0.776733 2.3301 0.776733C3.1068 0.776733 3.8835 0.776733 5.04854 0.776733C6.60194 0.776733 8.15534 0.776733 9.70874 0.776733C11.2621 0.776733 12.4272 0.776733 13.5922 0.776733L24.8544 28.3496L23.301 29.5146L34.1748 0.776733C34.9515 0.776733 35.3398 0.776733 36.1165 0.776733C36.8932 0.776733 37.2816 0.776733 38.0583 0.776733C39.6117 0.776733 41.1651 0.776733 42.7184 0.776733C44.2718 0.776733 45.8252 0.776733 46.6019 0.776733Z"/>
@@ -145,7 +145,7 @@
                                 </div>
                                 <div  id="group-4">
                                     <article  class="img__works">
-                                        <a href="#jarce" rel="close__jarce">
+                                        <a class="link__next" href="#jarce" rel="close__jarce">
                                             <img src="./img/jarce.png" alt="">
                                             <svg width="177" height="40" viewBox="0 0 177 40" fill="none" 
                                                 xmlns="http://www.w3.org/2000/svg">
@@ -159,7 +159,7 @@
                                     </article>
                                     <article></article>
                                     <article  class="img__works">
-                                        <a href="#at" rel="close__at">
+                                        <a class="link__next" href="#at" rel="close__at">
                                             <img src="./img/at.png" alt="">                         
                                             <svg width="99" height="56" viewBox="0 0 99 56" fill="none" 
                                                 xmlns="http://www.w3.org/2000/svg">
@@ -172,7 +172,7 @@
                                 <div  id="group-5">
                                     <article></article>
                                     <article  class="img__works">
-                                        <a href="#socoda" rel="close__socoda">
+                                        <a class="link__next" href="#socoda" rel="close__socoda">
                                             <img src="./img/socoda.png" alt="">
                                             <svg width="235" height="46" viewBox="0 0 273 56" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M20.375 56C17.375 56 14.5 55.5 11.875 54.625C9.125 53.75 6.75 52.375 4.75 50.75C2.75 49.125 1.25 47.125 0.375 45C-0.125 44 -0.125 43.125 0.375 42.25C0.875 41.375 1.75 40.875 2.875 40.625C3.75 40.5 4.5 40.625 5.375 41C6.25 41.5 6.75 42.125 7.25 43C7.75 44.125 8.75 45.25 10 46.25C11.25 47.25 12.875 48 14.625 48.625C16.5 49.25 18.375 49.5 20.375 49.5C22.625 49.5 24.625 49.125 26.625 48.5C28.5 47.75 30 46.75 31.25 45.5C32.375 44.125 33 42.5 33 40.625C33 38.125 32 35.875 30.125 34C28.25 32 25 30.875 20.625 30.375C14.875 29.875 10.25 28.125 7 25.25C3.625 22.375 2 18.875 2 14.625C2 11.5 2.875 8.875 4.625 6.75C6.375 4.625 8.75 3 11.625 1.875C14.625 0.75 17.875 0.25 21.5 0.25C24.375 0.25 26.875 0.625 29 1.5C31.125 2.25 33 3.375 34.625 4.75C36.25 6.125 37.625 7.75 38.75 9.75C39.375 10.75 39.625 11.75 39.5 12.625C39.375 13.5 38.875 14.25 38.125 14.75C37.25 15.25 36.25 15.375 35.25 15.125C34.25 14.75 33.5 14.25 33 13.25C32.25 11.875 31.375 10.75 30.25 9.875C29.125 9 27.875 8.25 26.5 7.625C25 7.125 23.375 6.875 21.375 6.875C17.875 6.875 15 7.5 12.75 8.75C10.375 10.125 9.25 12.125 9.25 14.875C9.25 16.25 9.625 17.625 10.375 18.875C11.125 20.125 12.375 21.25 14.375 22.25C16.25 23.125 19.125 23.875 22.75 24.25C28.25 24.75 32.625 26.5 35.75 29.375C38.875 32.25 40.375 35.875 40.375 40.5C40.375 43.125 39.875 45.5 38.75 47.375C37.625 49.375 36.125 51 34.375 52.25C32.5 53.625 30.375 54.625 28.125 55.25C25.375 55.625 22.875 56 20.375 56Z"/>
@@ -344,7 +344,7 @@
             </div>
           </div>
                 <img class="nes__illustration" src="./img/nespresso_img.png" alt="project nespresso" />
-               <a href="#"><button class="favorite" 
+               <a href="#fortnite" class="link__next" rel="close__fortnite"><button class="favorite" 
                 type="button">
             NEXT PROJECT
           </button></a> 
@@ -530,7 +530,7 @@
         </div>
               <img class="nes__illustration" src="./img/FortniteSignUP.png" alt="project nespresso" />
               <img class="second-image" src="./img/FortniteSignUP.png" alt="project nespresso" />
-             <a href="#"><button class="favorite" 
+             <a href="#akin" class="link__next" rel="close__akin"><button class="favorite" 
               type="button">
           NEXT PROJECT
         </button></a> 
@@ -603,7 +603,7 @@
   <!-- AKIN -->
   <div id="akin" class="panel">
     <div class="close__button close__button--hide close__akin">
-        <a href="#group-3" class="close-icon-container">
+        <a href="#group-2" class="close-icon-container">
             <span class="close-icon">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" enable-background="new 0 0 40 40">
                 <line x1="15" y1="15" x2="25" y2="25" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-miterlimit="10"></line>
@@ -708,7 +708,7 @@
       </div>
             <img class="nes__illustration" src="./img/akin-ilus-1.png" alt="project nespresso" />
             <img class="second-image" src="./img/akin-ilus-2.png" alt="project nespresso" />
-           <a href="#"><button class="favorite" 
+           <a href="#moode" class="link__next" rel="close__moode"><button class="favorite" 
             type="button">
         NEXT PROJECT
       </button></a> 
@@ -899,7 +899,7 @@
             <p class="secondpart__second--text">It was necessary that the brand image and the approach came out from the first seconds of navigation in order to make you want to buy, so I left on an elegant site highlighting the customizable and luxury side, whether on mobile, tablet or desktop.</p>
    
           </div> -->
-         <a href="#"><button class="favorite" 
+         <a href="#jarce" class="link__next" rel="close__jarce"><button class="favorite" 
           type="button">
       NEXT PROJECT
     </button></a> 
@@ -1082,6 +1082,7 @@
         <p class="desk__type--date--text">Modern Antiqua</p>
       </div>
     </div>
+
           <img class="nes__illustration" src="./img/jarcereel.png" alt="project nespresso" />
           <img class="second-image" src="./img/Jarce_desk.gif" alt="project nespresso" />
           <p class="jarce__final_p">The mobile version of this portfolio uses the same graphic codes as the tablet and desktop version to facilitate its development. The functionalities are all present (with the exception of the CV download)</p>
@@ -1271,7 +1272,7 @@
     </div>
           <img class="nes__illustration" src="./img/at-ilus-1.png" alt="project nespresso" />
           <img class="second-image" src="./img/Annie Tran.gif" alt="project nespresso" />
-         <a href="#"><button class="favorite" 
+         <a href="#socoda" class="link__next" rel="close__socoda"><button class="favorite" 
           type="button">
       NEXT PROJECT
     </button></a> 
@@ -1453,7 +1454,7 @@
           <p class="pic-text">The suppliers can be butchers, fishermen, market gardeners, poultry farmers, producers of fruit, fruit juice, etc. All are selected very rigorously in relation to the quality of their products and their ability to meet the needs of Socoda's restaurant customers. So I went on a relatively sleek Dashboard to keep this "hight gastronomy" side</p>
           <img class="second-image" src="./img/scda2.png" alt="project nespresso" />
           <img class="second-image" src="./img/Socoda.gif" alt="project nespresso" />
-         <a href="#"><button class="favorite" 
+         <a href="#nespresso" class="link__next" rel="close__nespresso"><button class="favorite" 
           type="button">
       NEXT PROJECT
     </button></a> 

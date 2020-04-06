@@ -25,10 +25,10 @@
     <div id="ip__container">
         <!-- initial header -->
         <div class="ip__header">
-            <h1 class="ip__logo">
-                <img class="ip__inner"  src="./../img/logo.png" alt="">
-            </h1>
-             <div class="ip__title"> I’m Axel UI / UX Designer based in Paris</div>
+          <div class="loader__element">
+            <img class="ip__inner"  src="./../img/logo.png" alt="">
+            <div class="ip__title">  I’m Axel UI / UX Designer based in Paris</div>
+          </div>
             <div class="ip__loader">
                 <svg class="ip__inner" width="60px" height="60px" viewBox="0 0 80 80">
                     <path class="ip__loader--circlebg" d="M40,10C57.351,10,71,23.649,71,40.5S57.351,71,40.5,71 S10,57.351,10,40.5S23.649,10,40.5,10z"/>
@@ -70,18 +70,22 @@
                       </div>
                       <div class="about__me">
                         <h2>About me<span>.</span></h2>
-                        My name is Axel CHAREL, I am 23 years old and I am currently in Bachelor Web at HÉTIC where I study Front development (HTML, CSS JavaScript) as well as Webdesign where I learn to do Design Systems, the UI and UX, prototypes and models.
-                        <p>Before entering Bachelor I did a Graphic and Digital Design Prepa at the Institut Artline where I discovered the basics of Photoshop, Illustrator and After Effects (bases which I subsequently perfected at HÉTIC and my side), the drawing as well as the design in general (print and web).</p>
+                        <div class="about__me--content">
+                          My name is Axel CHAREL, I am 23 years old and I am currently in Bachelor Web at HÉTIC where I study Front development (HTML, CSS JavaScript) as well as Webdesign where I learn to do Design Systems, the UI and UX, prototypes and models.
+                          <p>Before entering Bachelor I did a Graphic and Digital Design Prepa at the Institut Artline where I discovered the basics of Photoshop, Illustrator and After Effects (bases which I subsequently perfected at HÉTIC and my side), the drawing as well as the design in general (print and web).</p>
+                        </div>
                       </div>
 
                       <div class="features">
                         <h2>Digital experiences<span>.</span></h2>
-                        <span class="features--date">2020</span>
-                        Project "Create a platform for a customizable clothing brand" Models and prototypes / Integration
-                        <p>
-                          <span class="features--date">2019</span>
-                          HTML / CSS “Integration” project
-                        </p>
+                        <div class="features--content">
+                          <span class="features--date">2020</span>
+                          Project "Create a platform for a customizable clothing brand" Models and prototypes / Integration
+                          <p>
+                            <span class="features--date">2019</span>
+                            HTML / CSS “Integration” project
+                          </p>
+                        </div>
                       </div>
                     </div>
                     <div class="ip__container">
@@ -119,6 +123,7 @@
     <script src="./../js/classie.js"></script>
     <script src="./../js/pathLoader.js"></script>
     <script src="./../js/main.js"></script>
+    <script src="./../js/animateAbout.js"></script>
 
 </body>
 </html>
