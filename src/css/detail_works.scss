@@ -162,10 +162,13 @@
   display: none;
 }
 
+
 .heticc{
   display: none;
 }
-
+.jarce__final_p{
+  display: none;
+}
 @media (min-width: 768px) {
   .doublelogo {
     .neslogo {
@@ -241,6 +244,11 @@
     display: block;
     margin-right: auto;
     margin-left: auto;
+  }
+  .jarce__final_p{
+    display: block;
+    padding-top: 2em;
+   font-size: 16px;
   }
   .type--palette {
     display: block;
